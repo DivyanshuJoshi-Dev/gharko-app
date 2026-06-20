@@ -1,0 +1,40 @@
+:root{
+--accent: crimson;
+--bg:#ffffff;
+--text:#ffffff;
+--bodytext:#222222;
+}
+body.dark{
+--bg:#1b1b1b;
+--bodytext:#f0f0f0;
+}
+body{
+font-family:Arial,sans-serif;
+background:var(--bg);
+color:var(--bodytext);
+margin:0;
+padding:20px;
+}
+header{
+background:var(--accent);
+color:var(--text);
+padding:15px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.card,.product{
+border:1px solid #ccc;
+border-radius:10px;
+padding:15px;
+margin:10px 0;
+}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:10px;
+}
+button{
+cursor:pointer;
+}
