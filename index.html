@@ -17,60 +17,112 @@
 
     <div class="header-buttons">
         <button id="themeToggle">🌙</button>
+
         <button id="cartBtn">
-            Cart (<span id="cartCount">0</span>)
+            🛒 Cart (<span id="cartCount">0</span>)
         </button>
     </div>
 </header>
 
 <section class="hero">
     <h2>Everything delivered to your doorstep</h2>
-    <input type="text"
-           id="search"
-           placeholder="Search products...">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+    >
 </section>
 
-<section class="categories">
+<!-- Categories -->
 
-    <div class="card">
-        <h3>🍚 Grocery</h3>
-        <p>Rice, Flour, Oils</p>
+<section class="categories" id="categorySection">
+
+    <div class="card category-card" data-category="grocery">
+        <h3>🍚 Grocery & Kitchen</h3>
+        <p>Rice, Flour, Oils, Spices</p>
     </div>
 
-    <div class="card">
-        <h3>🥤 Drinks</h3>
-        <p>Juices, Soft Drinks</p>
+    <div class="card category-card" data-category="snacks">
+        <h3>🥤 Snacks & Drinks</h3>
+        <p>Juices, Soft Drinks, Chips</p>
     </div>
 
-    <div class="card">
-        <h3>🧴 Beauty</h3>
-        <p>Soap, Shampoo</p>
+    <div class="card category-card" data-category="beauty">
+        <h3>🧴 Beauty & Personal Care</h3>
+        <p>Soap, Shampoo, Skincare</p>
     </div>
 
-    <div class="card">
-        <h3>🧹 Household</h3>
-        <p>Cleaners & Supplies</p>
+    <div class="card category-card" data-category="household">
+        <h3>🧹 Household Essentials</h3>
+        <p>Cleaners, Detergents, Paper Goods</p>
     </div>
 
 </section>
 
-<section>
+<!-- Category Product View -->
+
+<section id="categoryView" style="display:none;">
+
+    <button id="backBtn">
+        ← Back to Categories
+    </button>
+
+    <h2 id="categoryTitle"></h2>
+
+    <div id="categoryProducts" class="products"></div>
+
+</section>
+
+<!-- Featured Products -->
+
+<section id="featuredSection">
+
     <h2>Featured Products</h2>
+
     <div id="products" class="products"></div>
+
 </section>
 
-<div class="cart-panel" id="cartPanel">
-    <h2>Your Cart</h2>
+<!-- Floating Cart -->
 
-    <div id="cartItems"></div>
+<div id="miniCart">
 
-    <h3>Total: ₹<span id="totalPrice">0</span></h3>
+    <h3>🛒 Your Cart</h3>
+
+    <div id="cartItems">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <hr>
+
+    <p>
+        Total:
+        <strong>₹<span id="cartTotal">0</span></strong>
+    </p>
 
     <button id="checkoutBtn">
         Proceed to Checkout
     </button>
+
+</div>
+
+<!-- Optional Full Cart Panel -->
+
+<div class="cart-panel" id="cartPanel" style="display:none;">
+
+    <h2>Your Cart</h2>
+
+    <div id="fullCartItems"></div>
+
+    <h3>
+        Total:
+        ₹<span id="totalPrice">0</span>
+    </h3>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
