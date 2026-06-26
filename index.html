@@ -1,28 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gharko - Home Delivery App</title>
-<link rel="stylesheet" href="styles.css">
+<title>Gharko - Instant Delivery</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
-<h1>Gharko - Home Delivery App</h1>
-<button id="themeToggle">Toggle Dark Mode</button>
+    <div class="logo">
+        <h1>🏠 Gharko</h1>
+        <p>Delivering essentials in minutes</p>
+    </div>
+
+    <div class="header-buttons">
+        <button id="themeToggle">🌙</button>
+        <button id="cartBtn">
+            Cart (<span id="cartCount">0</span>)
+        </button>
+    </div>
 </header>
 
-<input type="text" id="search" placeholder="Search products...">
+<section class="hero">
+    <h2>Everything delivered to your doorstep</h2>
+    <input type="text"
+           id="search"
+           placeholder="Search products...">
+</section>
 
-<div class="categories">
-  <div class="card"><h2>Grocery & Kitchen</h2><p>Rice, Flour, Oils, Spices</p></div>
-  <div class="card"><h2>Snacks & Drinks</h2><p>Chips, Soft Drinks, Juices</p></div>
-  <div class="card"><h2>Beauty & Personal Care</h2><p>Soap, Shampoo, Skincare</p></div>
-  <div class="card"><h2>Household Essentials</h2><p>Cleaners, Detergents, Paper Goods</p></div>
+<section class="categories">
+
+    <div class="card">
+        <h3>🍚 Grocery</h3>
+        <p>Rice, Flour, Oils</p>
+    </div>
+
+    <div class="card">
+        <h3>🥤 Drinks</h3>
+        <p>Juices, Soft Drinks</p>
+    </div>
+
+    <div class="card">
+        <h3>🧴 Beauty</h3>
+        <p>Soap, Shampoo</p>
+    </div>
+
+    <div class="card">
+        <h3>🧹 Household</h3>
+        <p>Cleaners & Supplies</p>
+    </div>
+
+</section>
+
+<section>
+    <h2>Featured Products</h2>
+    <div id="products" class="products"></div>
+</section>
+
+<div class="cart-panel" id="cartPanel">
+    <h2>Your Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+    <button id="checkoutBtn">
+        Proceed to Checkout
+    </button>
 </div>
-
-<h2>Featured Products</h2>
-<div id="products" class="products"></div>
 
 <script src="script.js"></script>
 </body>
